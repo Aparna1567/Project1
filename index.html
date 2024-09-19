@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;padding:0;box-sizing: border-box;background-color: gray;
+            display: flex;justify-content: center;align-items: center;height: 100vh;
+        }
+        .c{
+            width:320px;height:350px;background-color:white;border-radius: 3px;
+            box-shadow: 1px 3px 10px rgba(0,0,0,0.4);position: relative;
+        }
+         img{
+            width:100%;height:100%;object-fit: cover;object-position: center;
+            position: absolute;
+            } 
+         
+        .i{
+            position: absolute;top:10px;left:10px;right: 10px;bottom: 10px;
+        }
+         .c::before,.c::after{
+            content:"";width:100%;height:100%;position: absolute;top:0;left:0;z-index: -1;transition: 0.5s;
+            background-color: white; box-shadow: 1px 3px 10px rgba(0,0,0,0.2);
+            border-radius: 3px;
+        }
+        .c:hover::before{
+            transform:rotate(20deg);box-shadow: 1px 3px 10px rgba(0,0,0,0.2);
+        }
+        .c:hover::after{
+            transform:rotate(10deg);box-shadow: 1px 3px 10px rgba(0,0,0,0.2);
+         }
+        h2{
+            margin:0;padding:0;color:transparent;
+            font-weight: 300;font-size: 30px;background-image: linear-gradient(180deg,rgb(243, 247, 24)35%,rgb(255, 54, 54));
+            background-clip: text;
+            
+        } 
+       .c:hover .i{
+        bottom:80px;
+       } 
+       .d{
+        position: absolute;bottom:10px;height:40px;right:10px;left:10px;text-align: center;
+       }
+    </style>
+    
+</head>
+<body>
+<div class="c">
+    <div class="i"> 
+        <img src="Baby.png">   </div>
+        <div class="d">
+        <h2>Aparna Krishnan</h2></div>    
+</div>
+    
+</body>
+</html>
